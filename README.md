@@ -1,6 +1,6 @@
 # REST Service sample python code of Bluemix 
 
-First of all login to Bluemix.
+First of all, login to Bluemix.
 
 Clone this code from GitHub to local PC
 
