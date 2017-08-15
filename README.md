@@ -12,8 +12,7 @@ git clone https://https://github.com/takara9/REST_Sample_Python
 
 * Change directory to restServerPython
 
-* Edit manifest.yml 
-change Value of "random-route" from "false" to "true"
+* Edit manifest.yml: change Value of "random-route" from "false" to "true"
 
 * Deploy application
 
@@ -21,7 +20,7 @@ change Value of "random-route" from "false" to "true"
 $ bx cf push
 ~~~
 
-* Copy urls of pyCalcxx line from the resutls of folowing command 
+* Copy URL of pyCalcxx line from the resutls of folowing command 
 
 ~~~
 $ bx cf apps
@@ -32,7 +31,7 @@ $ bx cf apps
 Make a user-provided service instance available to CF apps. In following sample command, replace Sample URI address to new URI of above.
 
 ~~~
-bx cf uups pycalcxxu -p '{"username":"takara","password":"hogehoge","uri":"https://pycalcxx.mybluemix.net/calc"}' -r https://pycalcxx.mybluemix.net/calc
+bx cf cups pycalcxxu -p '{"username":"takara","password":"hogehoge","uri":"https://pycalcxx.mybluemix.net/calc"}' -r https://pycalcxx.mybluemix.net/calc
 ~~~
 
 
