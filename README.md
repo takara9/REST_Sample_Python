@@ -29,16 +29,14 @@ $ bx cf apps
 
 * Create user-provided service
 
-Make a user-provided service instance available to CF apps.
-
-In following sample command, replace Sample URI address to new URI of above.
+Make a user-provided service instance available to CF apps. In following sample command, replace Sample URI address to new URI of above.
 
 ~~~
 bx cf uups pycalcxxu -p '{"username":"takara","password":"hogehoge","uri":"https://pycalcxx.mybluemix.net/calc"}' -r https://pycalcxx.mybluemix.net/calc
 ~~~
 
 
-## Client
+## REST Client
 
 * Change directory to restClientPython
 
