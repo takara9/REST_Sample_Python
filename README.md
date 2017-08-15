@@ -1,26 +1,37 @@
 # REST Service sample python code of Bluemix 
 
+First of all login to Bluemix.
+
 Clone this code from GitHub to local PC
 
 ~~~
-git clone https://
+git clone https://https://github.com/takara9/REST_Sample_Python
 ~~~
 
-
 ## REST Server
-First of all login to Bluemix.
 
-Change directory to restServerPython
+* Change directory to restServerPython
 
-Deploy application
+* Edit manifest.yml 
+change Value of "random-route" from "false" to "true"
+
+* Deploy application
 
 ~~~
 $ bx cf push
 ~~~
 
-## Create user-provided service
+* Copy urls of pyCalcxx line from the resutls of folowing command 
 
-Make a user-provided service instance available to CF apps
+~~~
+$ bx cf apps
+~~~
+
+* Create user-provided service
+
+Make a user-provided service instance available to CF apps.
+
+In following sample command, replace Sample URI address to new URI of above.
 
 ~~~
 bx cf uups pycalcxxu -p '{"username":"takara","password":"hogehoge","uri":"https://pycalcxx.mybluemix.net/calc"}' -r https://pycalcxx.mybluemix.net/calc
@@ -29,15 +40,29 @@ bx cf uups pycalcxxu -p '{"username":"takara","password":"hogehoge","uri":"https
 
 # Client
 
-Change directory to restClientPython
+* Change directory to restClientPython
 
-Edit vcap-local.json.
+* Edit vcap-local.json. change from Sample URI to your URI in above.
 
-Execute client program.
+* Execute client program.
 
 ~~~
 $ php test_rest_clinet.php
 ~~~
+
+You got results such as following.
+
+~~~
+$ php test_rest_clinet.php 
+username = takara
+password = hogehoge
+REST Service URI = https://pycalcxx.mybluemix.net/calc
+----------------------
+Input A = 391.345
+Input B = 5.4452
+Result = 2130.951794
+~~~
+
 
 
 
