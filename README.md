@@ -38,7 +38,7 @@ bx cf uups pycalcxxu -p '{"username":"takara","password":"hogehoge","uri":"https
 ~~~
 
 
-# Client
+## Client
 
 * Change directory to restClientPython
 
@@ -50,7 +50,7 @@ bx cf uups pycalcxxu -p '{"username":"takara","password":"hogehoge","uri":"https
 $ php test_rest_clinet.php
 ~~~
 
-You got results such as following.
+You got results like a following.
 
 ~~~
 $ php test_rest_clinet.php 
