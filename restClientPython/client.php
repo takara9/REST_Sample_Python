@@ -1,6 +1,5 @@
 <?php
 include "cfenv.php";
-include "rest_if.php";
 
 $ch = curl_init();
 $vcap = new Cfenv();
@@ -36,7 +35,4 @@ if (isset($result->{'error'})) {
 
 curl_close($ch);
 
-
-
 ?>
-

@@ -1,21 +1,22 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
+import os
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from flask_httpauth import HTTPBasicAuth
 
-
+# for Health Check
 class HelloWorld(Resource):
     def get(self):
         return {'message': 'Hello World'}
 
-
+# for POST
 class Calc(Resource):
     auth = HTTPBasicAuth()
     @auth.login_required
     def post(self):
         args = parser.parse_args()
-        ans = int(args['a']) * int(args['b'])
+        ans = float(args['a']) * float(args['b'])
         return {'ans': ans }
 
     @auth.verify_password
