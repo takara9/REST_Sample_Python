@@ -7,4 +7,4 @@ applications:
   random-route: false
   domain: mybluemix.net
   name: pyCalcxx
-  command: python rest_service.py
+  command: python app.py
